@@ -3,5 +3,5 @@
 /// This is quivalent to the `dart:ffi` package for all platforms.
 library universal_ffi;
 
-export 'package:wasm_ffi/ffi.dart'
+export 'src/wasm_ffi/_ffi.dart'
     if (dart.library.ffi) 'src/dart_ffi/_ffi.dart';

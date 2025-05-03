@@ -35,6 +35,7 @@ enum LoadOption {
   isStaticallyLinked,
   isFfiPlugin,
   isStandaloneWasm,
+  isWasmPack,
 }
 
 /// Extension on [DynamicLibrary] with asynchronous methods.
@@ -108,7 +109,7 @@ class FfiHelper {
     }
 
     return FfiHelper._(
-      await DynamicLibrary.open(modulePath),
+      await openDynamicLibraryWithOptions(modulePath, options),
     );
   }
 
